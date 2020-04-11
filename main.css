@@ -2,7 +2,7 @@
 font-size: 8px;
 }
 html, body{
-  background: #F9F9F9;
+  background-color: #F9F9F9;
   color: #222222;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -18,11 +18,19 @@ header span{
   color: #FF0000;
   font-weight: 700;
 }
+header a{
+  padding: 0px 16px;
+  border: solid 1px #222222;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+header a:hover{
+  background-color: #222222;
+  color: #fff;
+  transition: 0.3s;
+}
 p{
   font-size: 1.5rem;
-}
-p:hover{
-  color: #FF0000;
 }
 ul{
   list-style: none;
@@ -37,21 +45,6 @@ li h2{
   font-size: 2rem;
   margin: .5rem 0;
 }
-.line{
-    display: inline-block;
-}
-.line::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #FF0000;
-    transition: width .3s;
-}
-.line:hover::after {
-    width: 80%;
-    transition: width .3s;
-}
 li h1{
   display: flex;
   justify-content: start;
@@ -65,6 +58,21 @@ li span{
   font-weight: 400;
   font-size: 5rem;
   text-transform: lowercase;
+}
+.line{
+  display: inline-block;
+}
+.line::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #FF0000;
+  transition: width .3s;
+}
+.line:hover::after {
+  width: 80%;
+  transition: width .3s;
 }
 .arrow {
   margin-left: 2rem;
@@ -84,9 +92,58 @@ a:hover .arrow {
 }
 footer{
   display: flex;
+  justify-content: flex-end;
   right: 0;
   bottom: 0;
-  position: fixed;
+  position: relative;
   margin: 2rem 4rem;
   font-size: 1.5rem;
+}
+.past a{
+  color: #D1D1D1;
+}
+.past h1{
+  text-decoration: line-through;
+}
+.past span.arrow{
+  display: none;
+}
+.past .line::after, .future .line::after{
+  opacity: 0;
+}
+.past a:hover h2, .future a:hover h2  {
+  color: #D1D1D1;
+}
+.future a, .future h1{
+  color: #D1D1D1;
+}
+#emoji:after {
+	content: "";
+	animation: emojis 5s infinite;
+}
+@keyframes emojis {
+  0% { content:"😷"; }
+  25% { content:"🧴"; }
+  50% { content:"🧤"; }
+  75% { content:"❤"; }
+  100% { content:"😷"; }
+}
+
+@media screen and (max-width: 480px){
+  li h2{
+    font-size: 1.5rem;
+  }
+  li h1, li h1 span, h1, h1 span, .arrow{
+    font-size: 2rem;
+  }
+  .arrow{
+    display: none;
+  }
+  footer{
+    justify-content: center;
+  }
+  header a{
+    display: none;
+  }
+
 }

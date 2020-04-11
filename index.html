@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67130886-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-67130886-4');
+    </script>
     <title>Hoje tem live!</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@330;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -10,8 +17,8 @@
     <script id="item-template" type="text/x-handlebars-template">
       <ul>
       	{{#each this}}
-      		<li>
-            <a class="line" href="{{link}}" target="_blank">
+      		<li class="{{status}}">
+            <a class="line" href="{{Link}}" target="_blank">
             <h2>{{week}} - {{day}} de {{month}}</h2>
             <h1><span>{{hour}}</span>{{artist}}<span class="arrow">-></span></h1>
             </a>
@@ -24,12 +31,12 @@
     <section>
       <header>
         <h1>Hoje tem <span>live</span></h1>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2gaBhkgoUBN3YKbtIKqPPCm34QnfO62D0tM4qs-0rIZ4YuA/viewform?usp=sf_link#"><p>Adicionar</p></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2gaBhkgoUBN3YKbtIKqPPCm34QnfO62D0tM4qs-0rIZ4YuA/viewform?usp=sf_link#" target="_blank"><p>Contribuir</p></a>
       </header>
       <div id="list">
       </div>
       <footer>
-        <a href="https://github.com/Tuxxu"><p>Made with ❤️ by Tuxu</p></a>
+        <a href="https://github.com/Tuxxu"><p>Home made with <span id="emoji"></span> together!</p></a>
       </footer>
     </section>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js'></script>
