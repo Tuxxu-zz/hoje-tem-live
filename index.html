@@ -4,6 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:image" content="img/share.png"/>
+    <meta property="og:title" content="Hoje tem live!"/>
+    <meta property="og:site_name" content="Hoje tem live!"/>
+    <meta property="og:url" content="https://tuxxu.github.io/hoje-tem-live/"/>
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Agenda completa e colaborativa com todas as lives">
+    <meta name="description" content="Agenda completa e colaborativa com todas as lives">
+    <meta name="author" content="Hoje tem live!">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@tuxxu">
+    <meta name="twitter:title" content="Hoje tem live!">
+    <meta name="twitter:description" content="Agenda completa e colaborativa com todas as lives">
+    <meta name="twitter:image:src" content="img/share.png">
     <meta name="msapplication-TileColor" content="#222222">
     <meta name="theme-color" content="#222222">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -15,7 +33,6 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67130886-4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -26,7 +43,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@330;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="main.css">
-    <script id="item-template" type="text/x-handlebars-template">
+    <script id="lives" type="text/x-handlebars-template">
         <ul>
             {{#each this}}
             <li class="{{status}}">
