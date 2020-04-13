@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#222222">
+    <meta name="theme-color" content="#222222">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#222222">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67130886-4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -30,15 +38,40 @@
   <body>
     <section>
       <header>
-        <h1>Hoje tem <span>live</span></h1>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2gaBhkgoUBN3YKbtIKqPPCm34QnfO62D0tM4qs-0rIZ4YuA/viewform?usp=sf_link#" target="_blank"><p>Contribuir</p></a>
+        <nav>
+          <div class="navbar">
+            <div class="logo">
+              <picture>
+                <img src="img/logo.svg" alt="Hoje tem Live!">
+              </picture>
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="#home">Lives do dia</a>
+                </li>
+                <li><a href="#about">Agenda completa</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </header>
       <div id="list">
       </div>
+      <div class="float">
+        <ul>
+          <li><input type="radio" onclick="javascript:filter();" name="filter" id="btn-today" checked="checked" ><label for="blue">Lives do dia</label></li>
+          <li><input type="radio" onclick="javascript:filter();" name="filter" id="btn-all" ><label for="red">Agenda completa</label></li>
+        </ul>
+      </div>
+    </section>
       <footer>
         <a href="https://github.com/Tuxxu"><p>Home made with <span id="emoji"></span> together!</p></a>
       </footer>
-    </section>
+
+    <script type="text/javascript">
+
+    </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script  src="./main.js"></script>
