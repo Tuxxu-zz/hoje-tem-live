@@ -1,5 +1,8 @@
 :root {
-font-size: 8px;
+  font-size: 8px;
+}
+* {
+  box-sizing: border-box;
 }
 html, body{
   background-color: #F9F9F9;
@@ -7,30 +10,64 @@ html, body{
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
+  min-height: 100vh;
 }
 header{
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem 4rem;
-  font-size: 1rem;
-}
-header span{
-  color: #FF0000;
-  font-weight: 700;
-}
-header a{
-  padding: 0px 16px;
-  border: solid 1px #222222;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-header a:hover{
-  background-color: #222222;
-  color: #fff;
-  transition: 0.3s;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  background-color: #fff;
 }
 p{
   font-size: 1.5rem;
+}
+body::-webkit-scrollbar-track {
+    background-color: #F9F9F9;
+}
+body::-webkit-scrollbar {
+    width: 1rem;
+    background: #F9F9F9;
+}
+body::-webkit-scrollbar-thumb {
+    background: #222222;
+}
+#list{
+  margin-top: 120px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow:   0px 24px 56px 4px #d1d1d1;
+}
+.logo {
+  padding: 20px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: auto;
+}
+.menu li {
+  margin-right: 1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 2rem;
+}
+section{
+  display: flex;
 }
 ul{
   list-style: none;
@@ -40,7 +77,7 @@ ul{
 li{
   margin: 4rem 0 1rem 0;
 }
-li h2{
+h2{
   font-weight: 400;
   font-size: 2rem;
   margin: .5rem 0;
@@ -128,6 +165,22 @@ footer{
   75% { content:"❤"; }
   100% { content:"😷"; }
 }
+input[type="radio"] {
+    display:none;
+}
+label{
+  cursor:pointer;
+}
+
+
+
+#future, #past{
+  display: none;
+}
+#today{
+  display: block;
+}
+
 
 @media screen and (max-width: 480px){
   li h2{
@@ -136,14 +189,38 @@ footer{
   li h1, li h1 span, h1, h1 span, .arrow{
     font-size: 2rem;
   }
-  .arrow{
+  .arrow, .menu{
     display: none;
   }
-  footer{
+  footer, .navbar{
     justify-content: center;
   }
-  header a{
-    display: none;
+  .navbar{
+    box-shadow: 0px 8px 24px 8px #d1d1d1;
   }
-
+  .float {
+    text-align: center;
+    z-index: 2;
+  }
+  .float ul{
+    flex-shrink: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 32px 0;
+    width: 100%;
+  }
+  .float ul li{
+    display:inline;
+    margin: auto;
+    background-color: #222222;
+    padding: 16px 24px;
+  }
+  .float ul li:last-child {
+    margin-left: 2px;
+  }
+  .float ul li label{
+    color: #fff;
+    font-size: 1.5rem
+  }
 }
